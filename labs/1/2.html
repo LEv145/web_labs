@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Meow!</title>
+    <style>
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <fieldset class="flex-column">
+            <legend>Какая сегодня погода?</legend>
+            <label><input type="checkbox" name="weather" value="sunny" />Солнечно</label>
+            <label><input type="checkbox" name="weather" value="dull" />Пасмурно</label>
+            <label><input type="checkbox" name="weather" value="strong_wind" />Сильный ветер</label>
+            <label><input type="checkbox" name="weather" value="other" />Другая</label>
+        </fieldset>
+        <input type="submit" value="Отправить!" />
+    </form>
+</body>
+</html>
