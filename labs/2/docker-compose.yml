@@ -1,0 +1,17 @@
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8020:80"
+    volumes:
+      - ./code:/code
+      - ./conf.d/:/etc/nginx/conf.d/
+    links:
+      - php
+
+  php:
+    image: php:8-fpm
+
+    volumes:
+      - ./code:/code

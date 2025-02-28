@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Случайная HTML Страница</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #222;
+      color: #eee;
+    }
+    header {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    main {
+      display: flex;
+      padding: 20px;
+    }
+    article {
+      flex: 2;
+      margin-right: 20px;
+    }
+    aside {
+      flex: 1;
+      background-color: #333;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+    }
+    .clock {
+      font-size: 2em;
+      text-align: center;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Случайная HTML Страница</h1>
+  </header>
+  <nav>
+    <a href="#">Главная</a>
+    <a href="#">О нас</a>
+    <a href="#">Контакты</a>
+    <a href="#">Блог</a>
+  </nav>
+  <main>
+    <article>
+      <h2>Добро пожаловать!</h2>
+      <p>Это пример другой случайной HTML страницы, демонстрирующий современную структуру с использованием HTML и CSS.</p>
+      <div class="clock" id="clock">00:00:00</div>
+      <script>
+        function updateClock() {
+          const now = new Date();
+          const hours = String(now.getHours()).padStart(2, '0');
+          const minutes = String(now.getMinutes()).padStart(2, '0');
+          const seconds = String(now.getSeconds()).padStart(2, '0');
+          document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+      </script>
+    </article>
+    <aside>
+      <h3>Новости</h3>
+      <ul>
+        <li>Новая статья уже в блоге!</li>
+        <li>Скидки до 50% на все товары!</li>
+        <li>Подпишитесь на нашу рассылку.</li>
+      </ul>
+    </aside>
+  </main>
+  <footer>
+    <p>© 2025 Случайная страница</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рандомная HTML Страница</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      margin: 0;
+      padding: 20px;
+    }
+    header, footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #4CAF50;
+      color: white;
+    }
+    main {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .random-box {
+      background-color: #ffeb3b;
+      padding: 15px;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+    button {
+      background-color: #2196F3;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1976D2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Добро пожаловать на рандомную HTML страницу!</h1>
+  </header>
+  
+  <main>
+    <p>Это пример случайно сгенерированного HTML кода, который демонстрирует базовую структуру документа.</p>
+    
+    <div class="random-box">
+      <p>Этот блок имеет случайный стиль и может содержать любой контент.</p>
+    </div>
+    
+    <button onclick="showRandomMessage()">Нажми меня!</button>
+    
+    <p id="message"></p>
+    
+    <script>
+      function showRandomMessage() {
+        const messages = [
+          "Сегодня отличный день!",
+          "Программирование - это весело!",
+          "Продолжай двигаться вперёд!",
+          "Ты делаешь потрясающую работу!"
+        ];
+        const randomIndex = Math.floor(Math.random() * messages.length);
+        document.getElementById('message').innerText = messages[randomIndex];
+      }
+    </script>
+  </main>
+  
+  <footer>
+    <p>© 2025 Рандомный сайт</p>
+  </footer>
+</body>
+</html>
